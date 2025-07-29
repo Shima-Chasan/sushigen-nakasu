@@ -7,7 +7,7 @@
     <meta name="description" content="鹿児島中央駅から徒歩10分。旬の魚と職人の握りを味わえる寿司店『すし源 中洲店』の公式サイトです。ランチ・ディナー・出前承ります。">
     <meta name="keywords" content="鹿児島,寿司,ランチ,ディナー,テイクアウト,中洲">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- ヘッダー -->
@@ -18,10 +18,9 @@
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="#kodawari">こだわり</a></li>
                     <li><a href="#menu">お品書き</a></li>
                     <li><a href="#interior">店内の様子</a></li>
-                    <li><a href="#store-info">店舗情報</a></li>
+                    <li><a href="#access">アクセス</a></li>
                     <li><a href="#reservation">ご予約</a></li>
                 </ul>
             </nav>
@@ -30,25 +29,29 @@
 
     <!-- ヒーローセクション -->
     <section class="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-carousel">
+            <div class="hero-slide active" style="background-image: url('image/sushi.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('image/counter-woman.png'); background-size: contain; background-position: center center; background-repeat: no-repeat;"></div>
+            <div class="hero-slide" style="background-image: url('image/taisyou.png'); background-position: center top; background-size: 90%; background-repeat: no-repeat;"></div>
+        </div>
         <div class="hero-content">
-            <h1>職人の技と旬の味を<br>心ゆくまで</h1>
-            <p>鹿児島・中洲で創業30余年<br>握りたての寿司をお届けします</p>
-            <a href="#reservation" class="cta-button">お席を予約する</a>
+            <!-- テキストとボタンを削除 -->
         </div>
     </section>
 
     <!-- こだわりセクション -->
     <section id="kodawari" class="kodawari">
         <div class="container">
-            <div class="two-col">
-                <div class="left-image">
-                    <img src="images/counter.jpg" alt="職人が握る様子">
-                </div>
-                <div class="right-text">
-                    <h2>受け継がれる技と真心</h2>
-                    <p>豊洲直送の鮮魚を毎朝仕入れ。<br>
-                    地下水で締め、女将が一粒ずつハンドピックした米で握ります。</p>
+            <div class="center-content">
+                <div class="center-text">
+                    <h2>鹿児島の旬を味わう</h2>
+                    <p>伝統の技と新鮮な食材で心を込めておもてなし</p>
+                    <div class="social-icon">
+                        <a href="https://www.instagram.com/sushigen__nakasuten/" target="_blank">
+                            <img src="image/Instagram-icon.png" alt="Instagram" class="instagram-icon">
+                            <span>Instagram</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,35 +112,27 @@
         </div>
     </section>
 
-    <!-- 店舗情報セクション -->
-    <section id="store-info" class="store-info">
+    <!-- アクセスセクション -->
+    <section id="access" class="access">
         <div class="container">
-            <h2>店舗情報</h2>
-            <div class="store-info-layout">
-                <div class="store-info-text">
-                    <div class="info-item">
-                        <h3>住所</h3>
-                        <p>〒890‑0045<br>鹿児島市武1‑40‑16 佐藤ビル</p>
+            <h2>アクセス</h2>
+            <div class="access-layout">
+                <div class="access-info">
+                    <div class="access-item">
+                        <h3><i class="location-icon"></i> 住所</h3>
+                        <p>〒890‑0045<br>鹿児島県鹿児島市武1丁目４０－１６</p>
                     </div>
-                    <div class="info-item">
-                        <h3>営業時間</h3>
-                        <p>ランチ 11:30～14:00 （L.O.13:30）<br>
-                        ディナー 18:00～22:00（L.O.21:30）<br>
-                        定休日：毎週火曜日</p>
+                    <div class="access-item">
+                        <h3><i class="train-icon"></i> アクセス</h3>
+                        <p>ＪＲ鹿児島中央駅 西口 徒歩10分<br>鹿児島市武の中州陸橋すぐ</p>
                     </div>
-                    <div class="info-item">
-                        <h3>アクセス</h3>
-                        <p>JR 鹿児島中央駅 西口 徒歩10分<br>
-                        鹿児島市武の中州陸橋すぐ</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>駐車場</h3>
-                        <p>8台<br>
-                        近隣にコインパーキングあり</p>
+                    <div class="access-item">
+                        <h3><i class="parking-icon"></i> 駐車場</h3>
+                        <p>8台<br>近隣にコインパーキングあり</p>
                     </div>
                 </div>
-                <div class="store-info-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3366.123456789!2d130.123456!3d31.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z6bm_5YWQ5bO2!5e0!3m2!1sja!2sjp!4v1234567890123" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="access-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3398.989201108151!2d130.538445!3d31.579343999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e67474bd857a5%3A0x57d2586724938be7!2z44GZ44GX5rqQIOS4rea0suW6lw!5e0!3m2!1sja!2sjp!4v1753775506180!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -147,34 +142,18 @@
     <section id="reservation" class="reservation">
         <div class="reservation-overlay"></div>
         <div class="container">
-            <h2>ご予約</h2>
-            <form class="reservation-form" name="reservation">
-                <div class="form-group">
-                    <label for="name">お名前</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="reservation-content">
+                <p class="reservation-text">ご予約・お問い合わせはお電話にて承っております！</p>
+                <div class="phone-number">
+                    <i class="phone-icon"></i>
+                    <a href="tel:099-250-8558">099-250-8558</a>
                 </div>
-                <div class="form-group">
-                    <label for="tel">電話番号</label>
-                    <input type="tel" id="tel" name="tel" required>
+                <div class="free-dial">
+                    <span class="free-dial-label">FRee<br>Dial</span>
+                    <a href="tel:0120-44-0558">0120-44-0558</a>
                 </div>
-                <div class="form-group">
-                    <label for="date">来店日</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="time">来店時間</label>
-                    <input type="time" id="time" name="time" required>
-                </div>
-                <div class="form-group">
-                    <label for="guests">人数</label>
-                    <input type="number" id="guests" name="guests" min="1" max="20" required>
-                </div>
-                <div class="form-group">
-                    <label for="requests">ご要望</label>
-                    <textarea id="requests" name="requests" rows="4"></textarea>
-                </div>
-                <button type="submit" class="submit-button">送信する</button>
-            </form>
+                <p class="reservation-hours">受付時間：11:30〜22:00 火曜定休</p>
+            </div>
         </div>
     </section>
 
@@ -186,7 +165,6 @@
                     <h3>すし源 中洲店</h3>
                 </div>
                 <div class="footer-links">
-                    <a href="#">プライバシーポリシー</a>
                     <a href="#">Instagram</a>
                 </div>
             </div>
@@ -210,6 +188,19 @@
                 }
             });
         });
+
+        // ヒーローカルーセル
+        const slides = document.querySelectorAll('.hero-slide');
+        let currentSlide = 0;
+        
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        // 5秒ごとにスライドを切り替え
+        setInterval(nextSlide, 5000);
 
         // ヘッダーのスクロール効果
         window.addEventListener('scroll', function() {
