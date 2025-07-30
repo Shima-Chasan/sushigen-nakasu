@@ -112,6 +112,11 @@ body {
     margin-left: 15px;
 }
 
+/* 最後のナビ項目の右マージンを削除して右端を揃える */
+.nav li:last-child {
+    margin-right: 0;
+}
+
 .instagram-button {
     display: flex;
     align-items: center;
@@ -807,6 +812,25 @@ body {
 
 .fade-in {
     animation: fadeIn 0.8s ease-out;
+}
+
+.nav-instagram-icon {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+/* ナビInstagramリンクのホバーエフェクト（tel-buttonと統一）*/
+.social-button a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.social-button a:hover {
+    transform: translateY(-3px);
+}
+/* 下線エフェクト無効化 */
+.social-button a::after {
+    display: none;
 }
 
 /* レスポンシブデザイン */
