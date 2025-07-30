@@ -14,14 +14,15 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1>すし源 中洲店</h1>
+                <a href="index.html" class="logo-link"><img src="image/logo.png" alt="すし源 中洲店" class="logo-image"></a>
             </div>
             <nav class="nav">
                 <ul>
                     <li><a href="#menu">お品書き</a></li>
                     <li><a href="#interior">店内の様子</a></li>
                     <li><a href="#access">アクセス</a></li>
-                    <li><a href="#reservation">ご予約</a></li>
+                    <li><a href="#shop-info">店舗情報</a></li>
+                    <li class="reservation-button"><a href="#reservation" class="tel-button"><svg class="phone-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="white" d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"></path></svg> 099-250-8558<br><span class="free-dial">火曜定休</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -31,6 +32,8 @@
     <section class="hero">
         <div class="hero-carousel">
             <div class="hero-slide active" style="background-image: url('image/sushi.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('image/sashimori.jpg'); background-size: 75%; background-position: center center; background-repeat: no-repeat;"></div>
+            <div class="hero-slide" style="background-image: url('image/karaage.jpg'); background-size: 75%; background-position: center center; background-repeat: no-repeat;"></div>
             <div class="hero-slide" style="background-image: url('image/counter-woman.png'); background-size: contain; background-position: center center; background-repeat: no-repeat;"></div>
             <div class="hero-slide" style="background-image: url('image/taisyou.png'); background-position: center top; background-size: 90%; background-repeat: no-repeat;"></div>
         </div>
@@ -116,21 +119,8 @@
     <section id="access" class="access">
         <div class="container">
             <h2>アクセス</h2>
-            <div class="access-layout">
-                <div class="access-info">
-                    <div class="access-item">
-                        <h3><i class="location-icon"></i> 住所</h3>
-                        <p>〒890‑0045<br>鹿児島県鹿児島市武1丁目４０－１６</p>
-                    </div>
-                    <div class="access-item">
-                        <h3><i class="train-icon"></i> アクセス</h3>
-                        <p>ＪＲ鹿児島中央駅 西口 徒歩10分<br>鹿児島市武の中州陸橋すぐ</p>
-                    </div>
-                    <div class="access-item">
-                        <h3><i class="parking-icon"></i> 駐車場</h3>
-                        <p>8台<br>近隣にコインパーキングあり</p>
-                    </div>
-                </div>
+            <div class="access-content">
+                <p class="access-address">鹿児島県鹿児島市武1丁目４０－１６</p>
                 <div class="access-map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3398.989201108151!2d130.538445!3d31.579343999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e67474bd857a5%3A0x57d2586724938be7!2z44GZ44GX5rqQIOS4rea0suW6lw!5e0!3m2!1sja!2sjp!4v1753775506180!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
@@ -157,19 +147,51 @@
         </div>
     </section>
 
+    <!-- 店舗情報セクション -->
+    <section id="shop-info" class="shop-info">
+        <div class="container">
+            <div class="shop-info-content">
+                <h2>店舗情報</h2>
+                <table class="shop-info-table">
+                    <tr>
+                        <th>住所</th>
+                        <td>鹿児島県鹿児島市武1丁目４０－１６</td>
+                    </tr>
+                    <tr>
+                        <th>電話番号</th>
+                        <td>099-250-8558、0120-44-0558</td>
+                    </tr>
+                    <tr>
+                        <th>営業時間</th>
+                        <td>ランチ　11:30～14:00 （L.O.13:30）<br>ディナー18:00～22:00（L.O.21:30）</td>
+                    </tr>
+                    <tr>
+                        <th>定休日</th>
+                        <td>火曜日</td>
+                    </tr>
+                    <tr>
+                        <th>座席</th>
+                        <td>30席<br>堀りごたつあり、座椅子あり</td>
+                    </tr>
+                    <tr>
+                        <th>お支払い</th>
+                        <td>クレジットカード・電子マネー・QRコード決済対応</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
     <!-- フッター -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h3>すし源 中洲店</h3>
+                    <a href="index.html" class="logo-link"><img src="image/logo.png" alt="すし源 中洲店" class="footer-logo-image"></a>
                 </div>
-                <div class="footer-links">
-                    <a href="#">Instagram</a>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 すし源 中洲店 All Rights Reserved.</p>
                 </div>
-            </div>
-            <div class="footer-copyright">
-                <p>&copy; 2025 Sushigen. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
