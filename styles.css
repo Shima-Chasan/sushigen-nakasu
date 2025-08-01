@@ -850,6 +850,214 @@ body {
     display: none;
 }
 
+/* お品書きページ専用スタイル */
+.menu-page {
+    padding-top: 100px; /* ヘッダー分の余白 */
+}
+
+.page-header {
+    background: linear-gradient(135deg, #4e4d8c 0%, #6a5acd 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.menu-content {
+    padding: 5rem 0;
+    background: #f9f9f9;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.menu-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.menu-card-header {
+    background: linear-gradient(135deg, #4e4d8c 0%, #6a5acd 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.menu-card-header h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.menu-card-header p {
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.menu-card-content {
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.pdf-placeholder {
+    margin-bottom: 2rem;
+}
+
+.pdf-icon {
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.pdf-placeholder p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.pdf-note {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+.menu-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.menu-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: #4e4d8c;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.menu-button:hover:not(.disabled) {
+    background: #6a5acd;
+    transform: translateY(-2px);
+}
+
+.menu-button.disabled {
+    background: #ccc;
+    color: #999;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.menu-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.menu-notes {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.menu-notes h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.5rem;
+    color: #4e4d8c;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.menu-notes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-notes li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.menu-notes li:before {
+    content: '•';
+    color: #4e4d8c;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.menu-notes li:last-child {
+    border-bottom: none;
+}
+
+.menu-contact {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.menu-contact h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.5rem;
+    color: #4e4d8c;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+}
+
+.phone-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.phone-info .phone-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4e4d8c;
+    margin-bottom: 0.25rem;
+}
+
+.phone-info .phone-hours {
+    font-size: 0.9rem;
+    color: #666;
+}
+
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
     .container {
@@ -895,5 +1103,178 @@ body {
     
     .reservation-form {
         padding: 2rem 1rem;
+    }
+    
+    /* お品書きページのレスポンシブ対応 */
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .menu-card-content {
+        padding: 1.5rem;
+    }
+    
+    .menu-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .menu-button {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+    }
+    
+    .phone-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+}
+
+/* 宴会案内セクション */
+.banquet-section {
+    margin: 3rem 0;
+}
+
+.banquet-card {
+    background: linear-gradient(135deg, #e8e2ff 0%, #f0ebff 100%);
+    border: 2px solid #4e4d8c;
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(78, 77, 140, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banquet-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(78, 77, 140, 0.2);
+}
+
+.banquet-title {
+    color: #4e4d8c;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.banquet-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.banquet-price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .banquet-price {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+.banquet-course {
+    color: #4e4d8c;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.price-info {
+    color: #4e4d8c;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #4e4d8c;
+    text-decoration-thickness: 3px;
+}
+
+.banquet-drinks {
+    color: #333;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.banquet-note {
+    color: #333;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* デュアルメニューセクション */
+.dual-menu-section {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.menu-item .pdf-placeholder {
+    margin-bottom: 1rem;
+}
+
+.menu-item .pdf-placeholder p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0.5rem 0 0 0;
+    font-weight: 500;
+}
+
+.menu-item .menu-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* 宴会案内のレスポンシブ対応 */
+@media (max-width: 768px) {
+    .banquet-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .banquet-title {
+        font-size: 1.3rem;
+    }
+    
+    .banquet-course {
+        font-size: 1.1rem;
+    }
+    
+    .price-info {
+        font-size: 1.6rem;
+    }
+    
+    .dual-menu-section {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 }
