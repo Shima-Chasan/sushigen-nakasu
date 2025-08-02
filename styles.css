@@ -852,7 +852,31 @@ body {
 
 /* お品書きページ専用スタイル */
 .menu-page {
-    padding-top: 100px; /* ヘッダー分の余白 */
+    /* ナビゲーションとヒーロー画像を重ねるためpadding-topを削除 */
+    position: relative;
+}
+
+/* メニューヒーロー画像セクション */
+.menu-hero-image {
+    height: 450px;
+    background-image: url('image/hunamori.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 .page-header {
@@ -1276,5 +1300,9 @@ body {
     .dual-menu-section {
         flex-direction: column;
         gap: 1.5rem;
+    }
+    
+    .menu-hero-image {
+        height: 300px;
     }
 }
