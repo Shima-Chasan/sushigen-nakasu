@@ -455,7 +455,7 @@ body {
 
 .interior h2 {
     font-family: 'Noto Serif JP', serif;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     text-align: center;
     margin-bottom: 3rem;
     color: #000000;
@@ -567,7 +567,7 @@ body {
 .access h2 {
     text-align: center;
     font-family: 'Noto Serif JP', serif;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
     position: relative;
 }
@@ -762,52 +762,89 @@ body {
 .footer {
     background-color: #4e4d8c;
     color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
+    padding: 2rem 0 1rem 0;
 }
 
 .footer-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
 }
 
 .footer-logo {
-    margin-bottom: 15px;
+    flex-shrink: 0;
+    margin-left: 1rem;
+    margin-right: 3rem;
 }
 
 .footer-logo-image {
-    height: 50px;
+    height: 60px;
     width: auto;
 }
 
-.footer-logo h3 {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 1.5rem;
-    letter-spacing: 0.1em;
-}
-
-.footer-links {
+.footer-nav {
+    flex-shrink: 0;
     display: flex;
-    gap: 2rem;
 }
 
-.footer-links a {
+.footer-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-nav li {
+    margin: 0;
+}
+
+.footer-nav a {
     color: #ffffff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
 }
 
-.footer-links a:hover {
-    color: #D93A3A;
+.footer-nav a:hover {
+    opacity: 0.7;
+}
+
+.footer-social {
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.footer-instagram {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-instagram:hover {
+    opacity: 0.7;
+}
+
+.footer-instagram-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-instagram span {
+    font-size: 1rem;
 }
 
 .footer-copyright {
     text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #ffffff;
-    color: #ffffff;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
 }
 
 /* アニメーション */
@@ -858,7 +895,7 @@ body {
 
 /* メニューヒーロー画像セクション */
 .menu-hero-image {
-    height: 450px;
+    height: 550px;
     background-image: url('image/hunamori.png');
     background-size: cover;
     background-position: center center;
@@ -869,20 +906,25 @@ body {
     justify-content: center;
 }
 
-.menu-hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
+/* 店舗情報ヒーロー画像セクション */
+.shop-info-hero-image {
+    height: 550px;
+    background-image: url('image/gaikan.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
 
 .page-header {
     background: linear-gradient(135deg, #4e4d8c 0%, #6a5acd 100%);
     color: white;
-    padding: 4rem 0;
+    padding: 2.5rem 0;
     text-align: center;
 }
 
@@ -901,6 +943,84 @@ body {
 .menu-content {
     padding: 5rem 0;
     background: #f9f9f9;
+}
+
+/* 店舗情報ページ専用スタイル */
+.shop-info-page {
+    /* ナビゲーションとヒーロー画像を重ねるためpadding-topを削除 */
+    position: relative;
+}
+
+.shop-info-content {
+    padding: 5rem 0;
+    background: #f9f9f9;
+}
+
+.shop-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.info-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.info-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.info-card-header {
+    background: linear-gradient(135deg, #4e4d8c 0%, #6a5acd 100%);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.info-card-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.info-card-content {
+    padding: 2rem;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.info-item strong {
+    color: #4e4d8c;
+    font-weight: 600;
+    min-width: 120px;
+    margin-right: 1rem;
+}
+
+.info-item span {
+    text-align: right;
+    line-height: 1.6;
 }
 
 .menu-grid {
@@ -1279,6 +1399,173 @@ body {
     font-size: 0.9rem;
 }
 
+/* すし源についてセクション */
+.about-section {
+    padding: 5rem 0;
+    background: #ffffff; /* 白背景 */
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333333;
+}
+
+.about-text h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.8rem;
+    color: #000000;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+
+.about-text h3::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #000000;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+
+.about-text p {
+    margin-bottom: 1.2rem;
+}
+
+
+.about-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 大将についてセクション */
+.chef-section {
+    padding: 5rem 0;
+    background: #f5f0fa; /* 薄い紫色の背景 */
+}
+
+.chef-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.chef-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333333;
+}
+
+.chef-text h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.8rem;
+    color: #000000;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+
+.chef-text h3::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #000000;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+
+.chef-text p {
+    margin-bottom: 1.2rem;
+}
+
+.chef-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.chef-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* すし源についてセクションのレスポンシブ対応 */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-text {
+        text-align: center;
+        order: 2;
+    }
+    
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .about-image {
+        order: 1;
+    }
+}
+
+/* 大将についてセクションのレスポンシブ対応 */
+@media (max-width: 768px) {
+    .chef-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .chef-text {
+        text-align: center;
+        order: 2;
+    }
+    
+    .chef-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .chef-image {
+        order: 1;
+    }
+}
+
 /* 宴会案内のレスポンシブ対応 */
 @media (max-width: 768px) {
     .banquet-card {
@@ -1303,6 +1590,50 @@ body {
     }
     
     .menu-hero-image {
-        height: 300px;
+        height: 350px;
+    }
+    
+    .shop-info-hero-image {
+        height: 350px;
+    }
+    
+    .shop-info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .info-card-content {
+        padding: 1.5rem;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .info-item strong {
+        min-width: auto;
+        margin-right: 0;
+    }
+    
+    .info-item span {
+        text-align: left;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .footer-nav ul {
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+    }
+    
+    .footer-instagram {
+        justify-content: center;
     }
 }
