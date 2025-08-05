@@ -231,16 +231,15 @@ body {
 
 .mobile-tel-button {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(to bottom, #c9a063, #8c6239);
     color: white !important;
-    padding: 8px 12px;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 50%;
     text-decoration: none;
     transition: transform 0.3s ease;
-    min-width: 80px;
+    width: 45px;
     height: 45px;
 }
 
@@ -249,23 +248,16 @@ body {
 }
 
 .mobile-tel-button .phone-icon {
-    width: 20px;
-    height: 20px;
-    margin-bottom: 3px;
-    margin-right: 0;
+    width: 24px;
+    height: 24px;
+    margin: 0;
 }
 
 .mobile-tel-button .phone-icon path {
     fill: white;
 }
 
-.reservation-text {
-    font-size: 0.5rem;
-    white-space: nowrap;
-    color: white;
-    line-height: 1;
-    font-weight: 500;
-}
+/* reservation-text removed - using icon-only button */
 
 /* モバイル専用改行 */
 .mobile-br {
