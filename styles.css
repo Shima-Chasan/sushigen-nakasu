@@ -236,8 +236,8 @@ body {
     justify-content: center;
     background: linear-gradient(to bottom, #c9a063, #8c6239);
     color: white !important;
-    padding: 6px 10px;
-    border-radius: 15px;
+    padding: 4px 8px;
+    border-radius: 12px;
     text-decoration: none;
     transition: transform 0.3s ease;
 }
@@ -258,7 +258,7 @@ body {
 }
 
 .reservation-text {
-    font-size: 0.45rem;
+    font-size: 0.35rem;
     white-space: nowrap;
     color: white;
     line-height: 1;
@@ -279,11 +279,10 @@ body {
     .reservation-text {
         line-height: 1.4;
     }
-    
-    /* モバイル表示時は4枚目と5枚目を表示 */
+    /* モバイル表示時のヒーロー画像4・5枚目の表示調整 */
     .hero-slide:nth-child(4),
     .hero-slide:nth-child(5) {
-        display: block;
+        display: block !important;
         position: absolute;
         top: 0;
         left: 0;
@@ -294,6 +293,12 @@ body {
         opacity: 0;
         transition: opacity 1.5s ease-in-out;
         z-index: -1;
+    }
+    
+    .hero-slide:nth-child(4).active,
+    .hero-slide:nth-child(5).active {
+        opacity: 1;
+        z-index: 0;
     }
     .header .container {
         justify-content: space-between;
@@ -443,11 +448,7 @@ body.menu-open {
     z-index: 0;
 }
 
-/* PC表示時は4枚目と5枚目を非表示 */
-.hero-slide:nth-child(4),
-.hero-slide:nth-child(5) {
-    display: none;
-}
+/* PC表示時も4枚目と5枚目を表示 */
 
 .hero-content h1 {
     font-family: 'Zen Kaku Gothic New', sans-serif;
@@ -1535,8 +1536,8 @@ body.menu-open {
     }
     
     .menu-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .menu-card-content {
@@ -1873,8 +1874,8 @@ body.menu-open {
     }
     
     .dual-menu-section {
-        flex-direction: column;
-        gap: 1.5rem;
+        flex-direction: row;
+        gap: 1rem;
     }
     
     .menu-hero-image {
