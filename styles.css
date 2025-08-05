@@ -236,10 +236,12 @@ body {
     justify-content: center;
     background: linear-gradient(to bottom, #c9a063, #8c6239);
     color: white !important;
-    padding: 4px 8px;
-    border-radius: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
     text-decoration: none;
     transition: transform 0.3s ease;
+    min-width: 80px;
+    height: 45px;
 }
 
 .mobile-tel-button:hover {
@@ -247,9 +249,9 @@ body {
 }
 
 .mobile-tel-button .phone-icon {
-    width: 18px;
-    height: 18px;
-    margin-bottom: 2px;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 3px;
     margin-right: 0;
 }
 
@@ -258,10 +260,11 @@ body {
 }
 
 .reservation-text {
-    font-size: 0.35rem;
+    font-size: 0.5rem;
     white-space: nowrap;
     color: white;
     line-height: 1;
+    font-weight: 500;
 }
 
 /* モバイル専用改行 */
@@ -301,13 +304,17 @@ body {
         z-index: 0;
     }
     .header .container {
+        display: flex;
         justify-content: space-between;
+        align-items: center;
         position: relative;
+        padding: 0 1rem;
     }
     
     .hamburger-menu {
         display: flex;
         order: 1;
+        flex: 0 0 auto;
     }
     
     .logo {
@@ -315,6 +322,7 @@ body {
         left: 50%;
         transform: translateX(-50%);
         order: 2;
+        flex: 0 0 auto;
     }
     
     /* モバイル用ロゴサイズ調整 */
@@ -325,6 +333,8 @@ body {
     .mobile-reservation {
         display: block;
         order: 3;
+        flex: 0 0 auto;
+        margin-left: auto;
     }
     
     .nav {
