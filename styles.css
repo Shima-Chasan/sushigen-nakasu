@@ -231,14 +231,14 @@ body {
 
 .mobile-tel-button {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(to bottom, #c9a063, #8c6239);
     color: white !important;
-    padding: 8px 12px;
-    border-radius: 20px;
+    padding: 6px 10px;
+    border-radius: 15px;
     text-decoration: none;
-    font-size: 0.8rem;
     transition: transform 0.3s ease;
 }
 
@@ -247,18 +247,39 @@ body {
 }
 
 .mobile-tel-button .phone-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
+    width: 14px;
+    height: 14px;
+    margin-bottom: 2px;
+    margin-right: 0;
+}
+
+.mobile-tel-button .phone-icon path {
+    fill: white;
 }
 
 .reservation-text {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     white-space: nowrap;
+    color: white;
+    line-height: 1;
+}
+
+/* モバイル専用改行 */
+.mobile-br {
+    display: none;
 }
 
 /* モバイル対応 */
 @media (max-width: 768px) {
+    .mobile-br {
+        display: inline;
+    }
+    
+    /* モバイル表示時は4枚目と5枚目を表示 */
+    .hero-slide:nth-child(4),
+    .hero-slide:nth-child(5) {
+        display: block;
+    }
     .header .container {
         justify-content: space-between;
         position: relative;
@@ -274,6 +295,11 @@ body {
         left: 50%;
         transform: translateX(-50%);
         order: 2;
+    }
+    
+    /* モバイル用ロゴサイズ調整 */
+    .logo-image {
+        height: 45px;
     }
     
     .mobile-reservation {
@@ -312,6 +338,25 @@ body {
     .nav a {
         font-size: 1.2rem;
         color: #ffffff !important;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+    
+    /* モバイルナビゲーションのホバー効果を修正 */
+    .nav a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #ffffff;
+        transition: width 0.3s ease;
+    }
+    
+    .nav a:hover::after {
+        width: 100%;
     }
     
     .reservation-button {
@@ -383,6 +428,12 @@ body.menu-open {
     z-index: 0;
 }
 
+/* PC表示時は4枚目と5枚目を非表示 */
+.hero-slide:nth-child(4),
+.hero-slide:nth-child(5) {
+    display: none;
+}
+
 .hero-content h1 {
     font-family: 'Zen Kaku Gothic New', sans-serif;
     font-size: 3.5rem;
@@ -394,7 +445,7 @@ body.menu-open {
 }
 
 .hero-content p {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     margin-bottom: 2rem;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     letter-spacing: 0.05em;
@@ -1469,8 +1520,8 @@ body.menu-open {
     }
     
     .menu-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
     
     .menu-card-content {
