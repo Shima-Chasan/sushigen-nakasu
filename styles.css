@@ -274,27 +274,7 @@ body {
     .reservation-text {
         line-height: 1.4;
     }
-    /* モバイル表示時のヒーロー画像4・5枚目の表示調整 */
-    .hero-slide:nth-child(4),
-    .hero-slide:nth-child(5) {
-        display: block !important;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        opacity: 0;
-        transition: opacity 1.5s ease-in-out;
-        z-index: -1;
-    }
-    
-    .hero-slide:nth-child(4).active,
-    .hero-slide:nth-child(5).active {
-        opacity: 1;
-        z-index: 0;
-    }
+    /* ヒーロー画像はpicture要素で自動的に切り替わるため、モバイル専用CSSは不要 */
     .header .container {
         display: flex;
         justify-content: space-between;
@@ -438,11 +418,18 @@ body.menu-open {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
     z-index: -1;
+}
+
+.hero-slide picture,
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .hero-slide.active {

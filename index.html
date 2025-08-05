@@ -62,11 +62,42 @@
     <!-- ヒーローセクション -->
     <section class="hero">
         <div class="hero-carousel">
-            <div class="hero-slide active" style="background-image: url('image/sushi.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('image/sashimori.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('image/karaage.png');"></div>
-            <div class="hero-slide" style="background-image: url('image/counter-woman.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('image/taisyou.jpg');"></div>
+            <!-- 1枚目：sushi.jpg（PC・モバイル共通） -->
+            <div class="hero-slide active">
+                <picture>
+                    <img src="image/sushi.jpg" alt="すし源の寿司" loading="lazy">
+                </picture>
+            </div>
+            
+            <!-- 2枚目：sashimori.jpg（PC・モバイル共通） -->
+            <div class="hero-slide">
+                <picture>
+                    <img src="image/sashimori.jpg" alt="新鮮な刺身盛り" loading="lazy">
+                </picture>
+            </div>
+            
+            <!-- 3枚目：karaage.png（PC・モバイル共通） -->
+            <div class="hero-slide">
+                <picture>
+                    <img src="image/karaage.png" alt="からあげ" loading="lazy">
+                </picture>
+            </div>
+            
+            <!-- 4枚目：counter-woman（PC: .png / モバイル: .jpg） -->
+            <div class="hero-slide">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="image/counter-woman.jpg">
+                    <img src="image/counter-woman.png" alt="カウンターの様子" loading="lazy">
+                </picture>
+            </div>
+            
+            <!-- 5枚目：taisyou（PC: .png / モバイル: .jpg） -->
+            <div class="hero-slide">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="image/taisyou.jpg">
+                    <img src="image/taisyou.png" alt="大将" loading="lazy">
+                </picture>
+            </div>
         </div>
         <div class="hero-content">
             <!-- テキストとボタンを削除 -->
